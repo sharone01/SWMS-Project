@@ -64,11 +64,12 @@ const handleLogin = async () => {
   </button>
   
   </form><br/><br/>
-  <p>don't have an account? 
-    <span>
+  <p className="fw-bold">don't have an account?  
+
+    <span className="fw-bold">
         <Link
          to="/signup">
-            SignUp
+            SignUp Now
         </Link>
     </span>
   </p>

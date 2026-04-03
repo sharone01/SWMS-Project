@@ -56,10 +56,10 @@ export const fetchReports = async () => {
 };
 
 export const getReports = async () => {
-  return await fetch(API_URL).then(res => res.json());
+  return await fetch(`${API_URL}/get`).then(res => res.json());
 };
 
-export const updateReportStatus = async (id, status) => {
+export const updateReport = async (id, status) => {
   return await fetch(`${API_URL}/update/${id}`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },

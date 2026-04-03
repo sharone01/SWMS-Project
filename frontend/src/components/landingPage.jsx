@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Landing = () => (
   <div className="p-10 text-center">
-    <h1 className="text-4xl font-bold mb-4">EcoTrack Waste Reporting</h1>
+    <h1 className="text-4xl font-bold mb-4">Smart Waste Reporting</h1>
     <p className="text-lg mb-6">
       Report waste issues quickly and help keep your community clean.
     </p>

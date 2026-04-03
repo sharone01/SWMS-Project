@@ -7,7 +7,7 @@ import time from "../assets/calendartime.jpg"
 import estimate from "../assets/loadestimate.jpg"
 import bin from "../assets/bintrash.jpg"
 import trashcar from "../assets/trashcar.jpg"
-import man1 from "../assets/leading-waste.jpg"
+import man1 from "../assets/leading-waste.jpg" 
 import industries1 from "../assets/industries-1.jpg"
 import industries2 from '../assets/industries-2.jpg'
 import industries3 from '../assets/industries-3.jpg'
@@ -350,8 +350,8 @@ const Home = () => {
       <section style={{
         background: " #f5f0e9",
 
-      }}>
-        <p style={{ textAlign: "centre", }}>We Cover Industries</p>
+      }}>  
+        <p style={{ textAlign: "centre", }}>We Cover Industries</p> 
         <h1 style={{
           fontFamily: "cursive,sans-serif",
           fontSize: "2.5rem",

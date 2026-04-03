@@ -15,11 +15,11 @@ function Report() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="p-6 max-w-lg mx-auto shadow-md bg-white rounded-lg">
+    <form onSubmit={handleSubmit} className="p-6 max-w-lg mx-auto shadow-md rounded-lg">
       <h2 className="text-2xl font-bold mb-4 text-center">Report Waste</h2>
 
       <label>Waste Type</label><br/>
-      <select className="w-full p-2 border rounded mb-3" 
+      <select className="w-full  border mb-3 cols-100 p-3 rounded-3 form-control" 
       onChange={(e)=>setFormData({...formData, wasteType: e.target.value})}>
         <option>Select type</option>
         <option>Plastic</option>
@@ -28,7 +28,7 @@ function Report() {
       </select> <br/>
 
       <label>Description</label><br/>
-      <textarea className="border mb-3"
+      <textarea className="border mb-3 cols-100 p-3 rounded-3 form-control"
        onChange={(e)=>setFormData({...formData, description: e.target.value})} /><br/>
 
       <label>Upload Photo</label><br/>

@@ -1,4 +1,4 @@
-// const reports = [
+//  const reports = [
 //   { id: 1, type: "Plastic", location: "Main Street", status: "Pending" },
 //   { id: 2, type: "Household", location: "Green Park", status: "Resolved" },
 // ];
@@ -33,19 +33,34 @@
 
 import { fetchReports } from "../api";
 import { useEffect, useState } from "react";
+import { getReports, updateReport } from "../api.js";
 
 const Dashboard = () => {
   const [reports, setReports] = useState([]);
 
   useEffect(() => {
-    fetchReports().then(setReports);
-  }, []);
+    getReports().then(setReports);
+  },
+   []);
+
+   const handleUpdate = async (id) => {
+    await updateReport(id, "Resolved");
+    setReports(prev =>
+      prev.map(r => r._id === id ? { ...r, status: "Resolved" } : r)
+    );
+  };
 
   return (
     <div>
+
+      <h2>Admin Dashboard</h2>
       {reports.map((r) => (
         <div key={r._id}>
-          {r.wasteType} - {r.status}
+         <p> {r.wasteType} - {r.status} </p> 
+
+          <button onClick={() => handleUpdate(r._id)}>
+            Mark Resolved
+          </button>
         </div>
       ))}
     </div>

@@ -28,10 +28,9 @@
 //   );
 // }
 
+// export default Dashboard
 
-// export default Dashboard 
-
-import { fetchReports } from "../api";
+// import { fetchReports } from "../api";
 import { useEffect, useState } from "react";
 import { getReports, updateReport } from "../api.js";
 
@@ -40,31 +39,29 @@ const Dashboard = () => {
 
   useEffect(() => {
     getReports().then(setReports);
-  },
-   []);
+  }, []);
 
-   const handleUpdate = async (id) => {
+  const handleUpdate = async (id) => {
     await updateReport(id, "Resolved");
-    setReports(prev =>
-      prev.map(r => r._id === id ? { ...r, status: "Resolved" } : r)
+    setReports((prev) =>
+      prev.map((r) => (r._id === id ? { ...r, status: "Resolved" } : r)),
     );
   };
 
   return (
     <div>
-
       <h2>Admin Dashboard</h2>
       {reports.map((r) => (
         <div key={r._id}>
-         <p> {r.wasteType} - {r.status} </p> 
+          <p>
+            {" "}
+            {r.wasteType} - {r.status}{" "}
+          </p>
 
-          <button onClick={() => handleUpdate(r._id)}>
-            Mark Resolved
-          </button>
+          <button onClick={() => handleUpdate(r._id)}>Mark Resolved</button>
         </div>
       ))}
     </div>
   );
 };
- export default Dashboard
-
+export default Dashboard;

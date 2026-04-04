@@ -11,7 +11,7 @@
   "description": "",
   "dependencies": {
     "bcrypt": "^6.0.0",
-    "cors": "^2.8.5",
+    "cors": "^2.8.6",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "fs": "^0.0.1-security",
@@ -21,5 +21,8 @@
     "multer": "^2.0.2",
     "nodemon": "^3.1.10",
     "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19"
   }
 }

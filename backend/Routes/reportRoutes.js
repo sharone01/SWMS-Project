@@ -26,9 +26,9 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 router.post ('/create', upload.single("photo"), createReport)
-// router.get('/signin', protect, getReports)
-//router.get("/:id",protect, getReportById);
-//router.put("/update/:id", protect, requireAdmin, upload.single("photo"), updateReport);
+router.get('/signin', protect, getReports)
+router.get("/:id",protect, getReportById);
+router.put("/update/:id", protect, requireAdmin, upload.single("photo"), updateReport);
 router.delete("/delete/:id", protect, requireAdmin, deleteReport);
 
 module.exports = router ;

@@ -44,11 +44,24 @@ const About = () => {
                 }} />
 
 
-            </section><br/><br/>
+            </section><br /><br />
 
 
-            <section>
-                
+            <section className='hero2' >
+                <h2>Yes, we own our own equipments</h2>
+
+                <p>
+
+                    In today’s industry, most companies don’t own the machines they rely on.
+                    In fact, studies show that  over 90% of contractors rent their equipment,<br />
+                    choosing to avoid the high upfront investment and ongoing maintenance.
+                    While that approach is common, it often leads to delays, higher costs, and <br />
+                    less control on the job site. We’ve taken a different path.  By owning our entire fleet,
+                    we keep every project fully under our control. That <br />
+                    means tighter schedules, dependable results, and work done
+                    right the first time, without waiting on a third party. <br />
+
+                </p>
             </section>
 
         </div>
